@@ -1,16 +1,16 @@
 ---
 const {imagen, titulo} = Astro.props
 ---
-<div>
+<div class="card-container">
     <img src={`../src/images/${imagen}`} alt=`Imagen de ${titulo}`>
     <h1>{titulo}</h1>
 </div>
 
 <style>
-    a {
-      padding: 0.5rem 1rem;
-      color: white;
-      background-color: #4c1d95;
-      text-decoration: none;
+    .card-container{
+      max-width: 5px;
     }
-  </style>
+    .card-container img{
+      width: 2em;
+    }
+</style>

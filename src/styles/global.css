@@ -1,8 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
 }
+
+header{
+  display: flex;
+  flex-direction: column;
+}
+.contenedor-imagen-burger{
+  widows: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #000000;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links ul li{
+  list-style-type: none;
+  padding: 10px;
+  
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #15bd31;
+}
+
+.expanded {
+  display: block;
+}
+
+@media screen and (min-width: 636px) {
+
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav-links{
+    display: flex;
+  }
+
+  .nav-links ul {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+
+}
+
