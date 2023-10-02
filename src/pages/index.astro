@@ -1,25 +1,44 @@
 ---
+import Card from '../components/Card.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title = "Cultivos Hidroponicos";
 ---
 <BaseLayout title={title}>
-	<main>
-		
-	</main>
-	<h2>¿Qué Son Los Cultivos Hidropónicos?</h2>
-	<p>
-		Los cultivos hidropónicos son una forma innovadora de cultivar alimentos sin usar tierra. En lugar de suelo, utilizan materiales especiales llenos de nutrientes para hacer crecer las plantas, proporcionándoles todo lo que necesitan para crecer.
-	</p>
-	<h2>Beneficios de la hidroponía</h2>
-	<p>Ahorro de agua: Utilizarás menos agua en comparación con la agricultura tradicional. En los cultivos hidropónicos, el agua se recircula y se utiliza de manera más eficiente.
-		Mayor producción y calidad: Obtendrás más cantidad de cultivos en menor tiempo y con una calidad superior. Además, en un espacio menor y en un ambiente controlado.
-		Menos plagas y enfermedades: Tus cultivos tienen menos probabilidades de verse afectadas por plagas y enfermedades del suelo.
-		Crecimiento durante todo el año: No tendrás que preocuparte por la estación del año. Los cultivos hidropónicos permiten cosechas continuas sin importar en la época en la que te encuentres.
-		Ventajas medioambientales: Evitarás el uso de abonos y recursos hídricos, lo que significa menos riesgo de contaminación por pesticidas, erosión y daños al suelo.</p>
-	<h2>Dificultades de los cultivos hidropónicos</h2>
-	<p>
-		Costos iniciales: Deberás realizar una inversión inicial en equipos, luces de crecimiento, nutrientes y sistemas de control, lo que puede resultar algo costoso (ver productos aquí)
-		Conocimiento técnico: Deberás informarte sobre los diferentes sistemas hidropónicos, tipos de nutrientes, pH del agua y otros aspectos técnicos necesarios para iniciarte.
-		Mantenimiento constante: Deberás supervisar y cuidar regularmente tus cultivos, por lo que necesitarás dedicarle tiempo.
-	</p>
+	<div class="contenedor-principal">
+		<main>
+			<h1>El BLOG más COMPLETO sobre CULTIVOS HIDROPÓNICOS</h1>
+		</main>
+		<section>
+			<h2>¿Qué son los <br>Cultivos Hidropónicos🍃?</h2>
+			<p>Los <span>cultivos hidropónicos</span> son una forma innovadora de <span>cultivar alimentos</span> sin usar tierra. En lugar de suelo, utilizan materiales especiales llenos de <span>nutrientes</span> para hacer crecer las plantas, proporcionándoles todo lo que necesitan para crecer.</p>
+		</section>
+		<section>
+			<h2>Beneficios de la Hidroponía</h2>
+			<ul>
+				<li><span>Ahorro de agua:</span> Utilizarás menos agua en comparación con la agricultura tradicional. En los cultivos hidropónicos, el agua se recircula y se utiliza de manera más eficiente.</li>
+				<li><span>Mayor producción y calidad:</span> Obtendrás más cantidad de cultivos en menor tiempo y con una calidad superior. Además, en un espacio menor y en un ambiente controlado.</li>
+				<li><span>Menos plagas y enfermedades:</span> Tus cultivos tienen menos probabilidades de verse afectadas por plagas y enfermedades del suelo.</li>
+				<li><span>Crecimiento durante todo el año:</span> No tendrás que preocuparte por la estación del año. Los cultivos hidropónicos permiten cosechas continuas sin importar en la época en la que te encuentres.</li>
+				<li><span>Ventajas medioambientales:</span> Evitarás el uso de abonos y recursos hídricos, lo que significa menos riesgo de contaminación por pesticidas, erosión y daños al suelo.</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Dificultades de los Cultivos Hidropónicos</h2>
+			<ul>
+				<li><span>Costos iniciales:</span> Deberás realizar una inversión inicial en equipos, luces de crecimiento, nutrientes y sistemas de control, lo que puede resultar algo costoso (ver productos aquí)</li>
+				<li><span>Conocimiento técnico:</span> Deberás informarte sobre los diferentes sistemas hidropónicos, tipos de nutrientes, pH del agua y otros aspectos técnicos necesarios para iniciarte.</li>
+				<li><span>Mantenimiento constante:</span> Deberás supervisar y cuidar regularmente tus cultivos, por lo que necesitarás dedicarle tiempo.</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Cultivos Hidropónicos caseros PASO a PASO</h2>
+			<div class="iframe-container">
+				<iframe src="https://www.youtube.com/embed/0ryn3pitGvg?si=XbvUqjwiJh1F-rzV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</section>
+		<section>
+			<h2>Los mejores productos para hidroponia</h2>
+			<Card titulo="Sistema de cultivo hidroponico marca Kipeke" imagen="azafran.jpg" categoria="productos" url="sistemamarcakapike"/>
+		</section>
+	</div>
 </BaseLayout>
