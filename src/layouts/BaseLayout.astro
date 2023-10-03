@@ -15,7 +15,12 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Header />
-        <slot />
+		<main>
+			<h1 class="main-title">{title}</h1>
+		</main>
+		<div class="container">
+			<slot />
+		</div>
 		<Footer />
 		<script>
 			import "../scripts/menu.js";

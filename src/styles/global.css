@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
-
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
-
 html{
   font-size: 16px;
 }
-
 body{
     background-color: rgb(255, 255, 255);
-    font-size: 16px;
 }
 header{
   display: flex;
@@ -25,13 +22,12 @@ header{
   margin: 15px;
 }
 .contenedor-imagen-burger img{
-  width: 75px;
+  width: 110px;
 }
 .hamburger{
   display: block;
   cursor: pointer;
 }
-
 .hamburger .line {
   display: block;
   width: 40px;
@@ -39,41 +35,58 @@ header{
   margin: 10px;
   background-color: #000000;
 }
-
 .nav-links {
   display: none;
 }
-
 .nav-links ul li{
   list-style-type: none;
   padding: 10px;
-  
 }
-
 .nav-links a {
   text-decoration: none;
   color: rgb(14, 13, 13);
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
-
 .nav-links a:hover,
 .nav-links a:focus {
   color: #15bd31;
+}
+.faqs{
+  width: 100%;
+}
+
+.faq-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  min-height: 30px;
+  border-radius: 20px;
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+}
+.faq-answer{
+  display: none;
 }
 
 .expanded {
   display: block;
 }
-
-
-.contenedor-principal{
+.main-title{
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+}
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
 main{
   display: flex;
   align-items: center;
@@ -82,14 +95,6 @@ main{
   min-height: 30vh;
   width: 100%;
 }
-main h1{
-  font-family: 'Raleway', sans-serif;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 800;
-  text-align: center;
-}
-
 section{
   font-family: 'Raleway', sans-serif;
   display: flex;
@@ -130,29 +135,53 @@ footer{
   height: 100%;
 }
 
+.lista-de-posts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.lista-de-posts li{
+  display: flex;
+  width: 90%;
+}
 
 @media screen and (min-width: 636px) {
-
   html{
     font-size: 24px;
   }
-
   header{
+    height: 150px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
   }
   .nav-links{
     display: flex;
+    align-items: center;
   }
-
   .nav-links ul {
     display: flex;
   }
+  .nav-links ul li a{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .img-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-contenedor img{
+    width: 140px;
+  }
+
   .hamburger {
     display: none;
   }
-
   section p, section ul, section .iframe-container{
     padding: 16px 0 0px 0;
     font-weight: 600;
@@ -173,5 +202,18 @@ footer{
     width: 100%;
     height: 600px;
   }
+
+  .lista-de-posts{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap ;
+    list-style: none;
+}  
+
+.lista-de-posts li{
+    width: 33%;
+}
 
 }

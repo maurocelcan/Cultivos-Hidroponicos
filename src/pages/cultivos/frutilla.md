@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostsLayout.astro
+layout: ../../layouts/BaseLayout.astro 
 title: Cultivo de Frutillas en Hidroponia
 author: cultivoshidroponicos.org
 description: "Descrubri como cultivar frutillas hidroponicas de manera facil"
@@ -8,4 +8,6 @@ image:
     alt: "Miniatura de los rayos de Astro."
 pubDate: 2022-07-15
 tags: ["astro", "aprender en público", "contratiempos", "comunidad"]
+
 ---
+# asd

@@ -1,28 +1,27 @@
 ---
-const {imagen, titulo, categoria, url} = Astro.props
+const { title, url, imagen} = Astro.props;
 ---
+
 <div class="card-container">
-    <a href={`./${categoria}/${url}`}>
-      <img src={`../src/images/${imagen}`} alt=`Imagen de ${titulo}`>
-      <h3>{titulo}</p>
+    <a href={url}>
+      <img src={imagen} alt={title}>
+      <h3>{title}</h3>
     </a>
+    
 </div>
 
 <style>
     .card-container{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 16rem;
-      padding-top: 1rem;
-    }
-    .card-container img{
-      border-radius: 16px;
-      width: 16rem;
+      background-color: rgb(82, 82, 82);
+      margin: 5px;
+      width: 100%;
+      height: 100%;
     }
 
-    .card-container h2{
-      font-size: 1rem;
-      margin: 0.5em;
+    img{
+      width: 100%;
+      min-height: 150px;
     }
+
+
 </style>

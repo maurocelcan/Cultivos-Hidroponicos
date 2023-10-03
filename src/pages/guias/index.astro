@@ -1,7 +1,18 @@
 ---
+import Card from '../../components/Card.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const pageTitle = "Guias";
+
+const posts = await Astro.glob('./*.md');
+const title = "Guías";
 ---
-<BaseLayout pageTitle={pageTitle}>
-	<h2>Guias</h2>
+
+<BaseLayout title = {title}>
+    <ul class="lista-de-posts">
+        {posts.map((post) => 
+            <li>
+                <Card imagen={post.frontmatter.image.url} title = {post.frontmatter.title} url={post.url}/>
+			</li>)
+        }
+    </ul>
 </BaseLayout>
+
