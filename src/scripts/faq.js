@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const faqContainers = document.querySelectorAll('.faq-container');
     faqContainers.forEach(function (container) {
-    container.addEventListener('click', function () {
-        this.querySelector('.faq-answer').classList.toggle('expanded');
-    });
+        const answer = container.querySelector('.faq-answer');
+        
+        container.addEventListener('click', function () {
+            answer.classList.toggle('expanded');
+        });
     });
 });

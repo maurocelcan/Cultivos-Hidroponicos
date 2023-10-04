@@ -1,8 +1,75 @@
 ---
-const platform = "github";
-const username = "maurocelcan";
+import CardFooter from "./CardFooter.astro";
+const productosInicio = await Astro.glob('../pages/cultivos/*.md');
 ---
 
+
 <footer>
-  <p>sddsd as<p/>
+
+  <div class="presentation-footer">
+    <div class="presentation-image-container">
+      <img src="/images/logo.png" alt="">
+    </div>
+    <p>Guías, consejos y más sobre Cultivos Hidroponicos</p>
+  </div>
+
+  <ul>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/cultivos/1">Cultivos</a></li>
+    <li><a href="/guias/1">Guías</a></li>
+    <li><a href="/productos/1">Productos</a></li>
+  </ul>
+
+  <div class="lastposts-container">
+    <p>Ultimos articulos !</p>
+    <ul class="lastPosts">
+			{productosInicio.slice(0,3).map((post) => 
+        <li>
+          <CardFooter imagen={post.frontmatter.image.url} title = {post.frontmatter.title} url={post.url}/>
+        </li>)}
+		</ul>
+  </div>
 </footer>
+
+<style>
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000a03;
+  color: white;
+  text-align: center;
+  bottom: 0 ;
+}
+.presentation-footer p{
+  font-size: 1rem;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+}
+
+.lastposts-container{
+  width: 100%;
+}
+ul li a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 636px){
+  footer{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .presentation-footer p{
+    font-size: 0.6rem;
+  }
+}
+
+</style>

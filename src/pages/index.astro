@@ -1,9 +1,7 @@
 ---
 import Card from '../components/Card.astro';
-import Faq from '../components/Faq.astro';
+import Faqs from '../components/Faqs.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import faqsData from '../data/faqs.json';
-const faqsArray = faqsData.faqs
 
 const title = "El BLOG mas COMPLETO sobre CULTIVOS HIDROPONICOS";
 const productosInicio = await Astro.glob('./productos/*.md');
@@ -49,11 +47,7 @@ const productosInicio = await Astro.glob('./productos/*.md');
 	</section>
 	<section>
 		<h2>Preguntas frecuntes</h2>
-		<ul class="faqs">
-			{faqsArray.map((faq) => (
-				<li><Faq pregunta={faq.pregunta} respuesta={faq.respuesta}/></li>
-			))}	
-		</ul>
+		<Faqs/>
 	</section>
 
 	<script>
