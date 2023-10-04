@@ -5,7 +5,7 @@ pubDate: 2022-07-01
 description: 'Descubri como cultivar Azafran en hidroponia'
 author: 'Astro alumno'
 image:
-    url: ../../images/azafran.jpg
+    url: '/images/Sistema-de-cultivo-de-torre-hidroponica-de-jardin.jpg'
     alt: 'Azafran'
 ---
 # Sistema Marca Kapike

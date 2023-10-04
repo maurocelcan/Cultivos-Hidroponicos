@@ -10,6 +10,8 @@ html{
 body{
     background-color: rgb(255, 255, 255);
 }
+
+/**HEADER**/
 header{
   display: flex;
   flex-direction: column;
@@ -52,10 +54,12 @@ header{
 .nav-links a:focus {
   color: #15bd31;
 }
+
+
+/*FAQS*/
 .faqs{
   width: 100%;
 }
-
 .faq-container{
   display: flex;
   flex-direction: column;
@@ -74,6 +78,24 @@ header{
 .expanded {
   display: block;
 }
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+}
+
+/**Main**/
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #82DCA1 0%, #0D781E 100%);
+  min-height: 20vh;
+  width: 100%;
+}
 .main-title{
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
@@ -81,20 +103,9 @@ header{
   font-weight: 800;
   text-align: center;
 }
-.container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-main{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(90deg, #82DCA1 0%, #0D781E 100%);
-  min-height: 30vh;
-  width: 100%;
-}
+
+
+
 section{
   font-family: 'Raleway', sans-serif;
   display: flex;
@@ -124,7 +135,10 @@ section p span, section ul li span{
   font-weight: 800;
 }
 footer{
-  background-color: red;
+  background-color: #083002;
+  color: white;
+  text-align: center;
+  bottom: 0 ;
 }
 .iframe-container{
   width: 100%;
@@ -145,6 +159,7 @@ footer{
 .lista-de-posts li{
   display: flex;
   width: 90%;
+
 }
 
 @media screen and (min-width: 636px) {
@@ -204,16 +219,18 @@ footer{
   }
 
   .lista-de-posts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
     width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    flex-wrap: wrap ;
-    list-style: none;
-}  
 
-.lista-de-posts li{
-    width: 33%;
-}
+  }  
+
+  .lista-de-posts li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
 
 }

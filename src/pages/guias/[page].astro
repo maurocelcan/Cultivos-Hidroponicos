@@ -1,0 +1,24 @@
+---
+import Card from "../../components/Card.astro";
+import Pagination from "../../components/Pagination.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export async function getStaticPaths({ paginate }) {
+  const allPost = await Astro.glob("./*md")
+  return paginate(allPost,{ pageSize: 2});
+}
+const title = "Guías"
+const { page } = Astro.props;
+
+---
+<BaseLayout title = {title}>
+  
+  <ul class="lista-de-posts">
+      {page.data.map((post) => 
+      <li>
+          <Card imagen={post.frontmatter.image.url} title = {post.frontmatter.title} url={post.url}/>
+      </li>)}
+  </ul>
+  <p> {page.currentPage} / {page.lastPage} </p>
+  <Pagination prevUrl={page.url.prev} nextUrl={page.url.next}/>
+</BaseLayout>
+

@@ -2,26 +2,52 @@
 const { title, url, imagen} = Astro.props;
 ---
 
-<div class="card-container">
-    <a href={url}>
+<a class="card-container" href={url}>
+  <div class="card-image-container">
       <img src={imagen} alt={title}>
-      <h3>{title}</h3>
-    </a>
-    
-</div>
+  </div>
+  <div class="card-text-container">
+    <h3>{title}</h3>
+  </div>
+  
+</a>
 
 <style>
-    .card-container{
-      background-color: rgb(82, 82, 82);
+
+    a{
+      text-decoration: none;
+    }
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
       margin: 5px;
       width: 100%;
       height: 100%;
-    }
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregamos una sombra */
+  }
 
-    img{
-      width: 100%;
-      min-height: 150px;
-    }
+  .card-text-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-image-container{
+    width: 100%;
+    height: auto; /* Para mantener la proporción de aspecto original de la imagen */
+    
+  }
+  h3 {
+    color: #053610;
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 200px;
+  }
 
 
 </style>
