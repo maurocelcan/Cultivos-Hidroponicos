@@ -1,0 +1,29 @@
+---
+const { url, text } = Astro.props;
+---
+<div class="pagination-button">
+    <a href={url}>{text}</a>
+</div>
+
+
+<style>
+    .pagination-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(3, 39, 22);
+        text-decoration: none;
+        border-radius: 15px;
+        height: 35px;
+        width: 125px;
+        margin: 0 10px 0 10px;
+    }
+    .pagination-button a{
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        font-weight: 300;
+        cursor: pointer;
+    }
+</style>

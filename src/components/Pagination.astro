@@ -1,12 +1,32 @@
 ---
-const { prevUrl, nextUrl } = Astro.props;
+import PaginationButton from "./PaginationButton.astro";
+const { prevUrl, nextUrl, minCantidad, maxCantidad } = Astro.props;
 ---
 
-<nav>
-    {
-        prevUrl && <a href={prevUrl}>Anterior</a>
+<div>
+    <p>{minCantidad}/{maxCantidad}</p>
+    <nav>
+        {
+            prevUrl && <PaginationButton url={prevUrl} text="Anterior"/>
+        }
+        {
+            nextUrl && <PaginationButton url={nextUrl} text="Siguiente"/>
+        }
+    </nav>
+</div>
+
+<style>
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    {
-        nextUrl && <a href={nextUrl}>Siguiente</a>
+    div p{
+        text-align:center;
     }
-</nav>
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+</style>

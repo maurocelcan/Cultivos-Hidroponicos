@@ -33,43 +33,43 @@ const productosInicio = await Astro.glob('../pages/cultivos/*.md');
 
 <style>
 
-footer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #000a03;
-  color: white;
-  text-align: center;
-  bottom: 0 ;
-}
-.presentation-footer p{
-  font-size: 1rem;
-}
-
-ul{
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  width: 100%;
-}
-
-.lastposts-container{
-  width: 100%;
-}
-ul li a{
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 636px){
   footer{
-    flex-direction: row;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000a03;
+    color: white;
+    text-align: center;
+    bottom: 0 ;
   }
   .presentation-footer p{
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
-}
+
+  ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+  }
+
+  .lastposts-container{
+    width: 100%;
+  }
+  ul li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 636px){
+    footer{
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .presentation-footer p{
+      font-size: 0.6rem;
+    }
+  }
 
 </style>
