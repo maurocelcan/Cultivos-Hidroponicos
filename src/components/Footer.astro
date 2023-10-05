@@ -5,34 +5,51 @@ const productosInicio = await Astro.glob('../pages/cultivos/*.md');
 
 
 <footer>
-
-  <div class="presentation-footer">
-    <div class="presentation-image-container">
-      <img src="/images/logo.png" alt="">
+  <div class="footer-info-container">
+    <div class="presentation-footer">
+      <div class="presentation-image-container">
+        <a href="/">
+          <img src="/images/logo.png" alt="">
+        </a>
+      </div>
+      <p>Guías, consejos y más sobre Cultivos Hidroponicos</p>
     </div>
-    <p>Guías, consejos y más sobre Cultivos Hidroponicos</p>
+    
+    <ul>
+      <h3>Categorias</h3>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/cultivos/1">Cultivos</a></li>
+      <li><a href="/guias/1">Guías</a></li>
+      <li><a href="/productos/1">Productos</a></li>
+    </ul>
+  
+    <div class="lastposts-container">
+      <p>Últimos artículos</p>
+      <ul class="lastPosts">
+        {productosInicio.slice(0,3).map((post) => 
+          <li>
+            <CardFooter imagen={post.frontmatter.image.url} title = {post.frontmatter.title} url={post.url}/>
+          </li>)}
+      </ul>
+    </div>
   </div>
-
-  <ul>
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/cultivos/1">Cultivos</a></li>
-    <li><a href="/guias/1">Guías</a></li>
-    <li><a href="/productos/1">Productos</a></li>
-  </ul>
-
-  <div class="lastposts-container">
-    <p>Ultimos articulos !</p>
-    <ul class="lastPosts">
-			{productosInicio.slice(0,3).map((post) => 
-        <li>
-          <CardFooter imagen={post.frontmatter.image.url} title = {post.frontmatter.title} url={post.url}/>
-        </li>)}
-		</ul>
+  <div class="footer-extra-info">
+    <div class="footer-info">
+      <div class="footer-info-rights">
+        <p>© 2023 cultivoshidroponicos.org | Todos los derechos reservados</p>
+        <a href="">MJ Company</a>
+      </div>  
+    </div>  
+    <div class="footer-info-links">
+      <a href="">Contacto</a>
+      <a href="">Aviso Legal</a>
+      <a href="">Política De Privacidad</a>
+      <a href="">Política De Cookies</a>
+    </div>
   </div>
 </footer>
 
 <style>
-
   footer{
     display: flex;
     flex-direction: column;
@@ -40,10 +57,48 @@ const productosInicio = await Astro.glob('../pages/cultivos/*.md');
     background-color: #000a03;
     color: white;
     text-align: center;
-    bottom: 0 ;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .presentation-footer{
+    margin-top: 16px  ;
+    margin-bottom: 32px;
   }
   .presentation-footer p{
     font-size: 1rem;
+    font-weight: 200;
+  }
+  .footer-info{
+    width: 100%;
+  }
+
+  .footer-info a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .footer-info-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-info-links a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+
+  .footer-extra-info{
+    width: 100%;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 20vh;
   }
 
   ul{
@@ -51,25 +106,73 @@ const productosInicio = await Astro.glob('../pages/cultivos/*.md');
     flex-direction: column;
     list-style: none;
     width: 100%;
+    margin-bottom: 32px;
   }
 
   .lastposts-container{
     width: 100%;
   }
+
+  .lastposts-container p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .lastPosts li{
+    border-top: 1px  solid white;
+  }
+  ul h3{
+    font-size: 1.5rem;
+  }
+  ul li{
+    padding: 10px;
+    
+  }
   ul li a{
     text-decoration: none;
     color: white;
     cursor: pointer;
+    font-size: 1.2rem;
   }
 
   @media screen and (min-width: 636px){
-    footer{
+    .footer-info-container{
+      display: flex;
+      width: 100%;
       flex-direction: row;
       align-items: flex-start;
     }
     .presentation-footer p{
       font-size: 0.6rem;
     }
+
+    .lastposts-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .lastposts-container p{
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .presentation-footer{
+      margin: 0;
+    }
+    .footer-info-container{
+      margin-top: 32px;
+    }
+    ul h3{
+      font-size: 1rem;
+    }
+
+    ul li a{
+    font-size: 0.8rem;
+  }
   }
 
 </style>
