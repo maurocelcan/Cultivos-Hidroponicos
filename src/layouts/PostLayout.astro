@@ -3,9 +3,33 @@ import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout title = {frontmatter.title}>
-    <h2>Autor del artículo: {frontmatter.author}</h2>
-    <p>{frontmatter.description}</p>
-    <slot />
+<BaseLayout title = {frontmatter.title} imageUrl={frontmatter.image.url}>
+    <div class="post-container">
+        <div class="post-image-container">
+            <img src={frontmatter.image.url} alt={frontmatter.title}>
+        </div>
+        <p>Por: {frontmatter.author}</h2>
+        <slot />
+    </div>
 </BaseLayout>
+
+<style>
+
+    .post-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .post-image-container{
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+    }
+
+    img{
+        width: 100%;
+    }
+</style>
 

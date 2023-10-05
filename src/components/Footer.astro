@@ -41,10 +41,10 @@ const productosInicio = await Astro.glob('../pages/cultivos/*.md');
       </div>  
     </div>  
     <div class="footer-info-links">
-      <a href="">Contacto</a>
-      <a href="">Aviso Legal</a>
-      <a href="">Política De Privacidad</a>
-      <a href="">Política De Cookies</a>
+      <a href="/contacto">Contacto</a>
+      <a href="/aviso-legal">Aviso Legal</a>
+      <a href="/politica-de-privacidad">Política De Privacidad</a>
+      <a href="/politica-de-cookies">Política De Cookies</a>
     </div>
   </div>
 </footer>
@@ -139,14 +139,12 @@ const productosInicio = await Astro.glob('../pages/cultivos/*.md');
   @media screen and (min-width: 636px){
     .footer-info-container{
       display: flex;
-      width: 100%;
       flex-direction: row;
       align-items: flex-start;
     }
     .presentation-footer p{
       font-size: 0.6rem;
     }
-
     .lastposts-container{
       display: flex;
       flex-direction: column;
@@ -154,7 +152,6 @@ const productosInicio = await Astro.glob('../pages/cultivos/*.md');
       justify-content: center;
       width: 100%;
     }
-
     .lastposts-container p{
       font-size: 1rem;
       font-weight: 600;
@@ -171,8 +168,8 @@ const productosInicio = await Astro.glob('../pages/cultivos/*.md');
     }
 
     ul li a{
-    font-size: 0.8rem;
+      font-size: 0.8rem;
+    }
   }
-  }
-
+  
 </style>

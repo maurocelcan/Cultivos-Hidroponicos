@@ -6,7 +6,7 @@ export async function getStaticPaths({ paginate }) {
   const allPost = await Astro.glob("./*md")
   return paginate(allPost,{ pageSize: 2});
 }
-const title = "Guías"
+const title = "Productos"
 const { page } = Astro.props;
 
 ---
